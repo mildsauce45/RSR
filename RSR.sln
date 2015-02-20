@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSR", "RSR\RSR.csproj", "{47415F67-617E-439A-90EB-AEAECF291D78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSR.Core", "RSR.Core\RSR.Core.csproj", "{C565B4DC-5981-4CE9-BE54-D8FD0E222A1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSR.Data", "RSR.Data\RSR.Data.csproj", "{6303D79E-39C9-434E-8026-41C8E8A9C029}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47415F67-617E-439A-90EB-AEAECF291D78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47415F67-617E-439A-90EB-AEAECF291D78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47415F67-617E-439A-90EB-AEAECF291D78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47415F67-617E-439A-90EB-AEAECF291D78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C565B4DC-5981-4CE9-BE54-D8FD0E222A1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C565B4DC-5981-4CE9-BE54-D8FD0E222A1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C565B4DC-5981-4CE9-BE54-D8FD0E222A1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C565B4DC-5981-4CE9-BE54-D8FD0E222A1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6303D79E-39C9-434E-8026-41C8E8A9C029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6303D79E-39C9-434E-8026-41C8E8A9C029}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6303D79E-39C9-434E-8026-41C8E8A9C029}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6303D79E-39C9-434E-8026-41C8E8A9C029}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

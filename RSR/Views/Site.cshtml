@@ -1,0 +1,88 @@
+﻿<!doctype html>
+<html lang="en">
+    <head>
+        <title>Really Simple Reader</title>
+        <link href="@Url.Content("~/Content/css/styles.css")" type="text/css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <header>
+                <div id="authentication-display">
+                    <div data-bind="visible: !showLoginHeader()">
+                        <strong><span data-bind="text: userName"></span></strong> Not <span data-bind="text: userName"></span>? <a class="authHeader" data-bind="click: logoff">Log Off</a>
+                    </div>
+                    <div data-bind="visible: showLoginHeader()">
+                        Have an account? <a class="authHeader" data-bind="click: login">Log In</a> or <a href="register">Sign Up</a>
+                    </div>
+                </div>
+            </header>
+
+            <nav>
+                <a class="nav-button" data-bind="click: addSubscription">Subscriptions</a>
+            </nav>
+        </div>
+
+        <div>
+            <div id="main" data-bind="visible: !showLoginForm()">
+
+                <div class="marquee">
+
+                    <!-- ko foreach: subscriptions -->
+
+                    <div class="subscription" data-bind="click: subscriptionItemClick">
+                        <span data-bind="text: name"></span>
+                        <br />
+                        <span data-bind="text: unreadEntries"></span>
+                    </div>
+
+                    <!-- /ko -->
+                </div>
+
+                <div class="feed-outer-border"></div>
+
+                <div class="feed-area">
+
+                    <!-- ko foreach: feedItems-->
+
+                    <div class="feed-item">
+                        <span data-bind="text: title, click: feedItemClick" class="feed-item-title"></span>
+                        <br />
+                        <span data-bind="html: description"></span>
+                    </div>
+
+                    <!-- /ko -->
+
+                </div>
+            </div>
+
+            <div class="dialog" data-bind="visible: showLoginForm()">
+                Username <input type="text" name="Username" data-bind="value: userName" class="form-textbox" /><br />
+                Password <input type="password" name="Password" data-bind="value: password" class="form-password" /><br />
+                Remember Me <input type="checkbox" name="RememberMe" data-bind="checked: rememberMe" /><br />
+
+                <button data-bind="click: submitCredentials" class="form-submit">Login</button>
+                <button data-bind="click: closeDialog">Cancel</button>
+            </div>
+
+            <div class="dialog" data-bind="visible: showSubscriptionForm()">
+                Feed Url <input id="feed-url" type="text" class="form-textbox" /><br />
+
+                <button data-bind="click: addSubscription" class="form-submit">Add</button>
+                <button data-bind="click: closeDialog">Cancel</button>
+            </div>
+
+            <script src="https://code.jquery.com/jquery-2.1.3.min.js" type="text/javascript"></script>
+            <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js" type="text/javascript"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" type="text/javascript"></script>
+            <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.2.0/knockout-min.js" type="text/javascript"></script>
+            <script src="@Url.Content("~/Content/js/viewmodels/SubscriptionsViewModel.js")" type="text/javascript"></script>
+
+            <script type="text/javascript">
+                $(function () {
+                    ko.applyBindings(new RSR.SubscriptionsViewModel());
+                });
+            </script>
+        </div>
+    </body>
+</html>

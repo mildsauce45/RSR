@@ -17,7 +17,7 @@ class RSR.SubItemViewModel
             accepts: 'application/json',
             type: 'GET',
             dataType: 'json',
-            url: "RSR/subscriptions/#{subId}"
+            url: RSR.webroot + "subscriptions/#{subId}"
         })
         
         promise.then (results) =>
@@ -100,7 +100,7 @@ class RSR.SubscriptionsViewModel
             accepts: 'application/json',
             type: 'GET',
             dataType: 'json',
-            url: 'RSR/subscriptions',
+            url: RSR.webroot + 'subscriptions',
             error: error
         })
         
@@ -118,7 +118,7 @@ class RSR.SubscriptionsViewModel
             type: 'POST',
             data: credentials,
             dataType: 'json',
-            url: 'RSR/login'
+            url: RSR.webroot + 'login'
         })
         
         promise.then (results) =>            

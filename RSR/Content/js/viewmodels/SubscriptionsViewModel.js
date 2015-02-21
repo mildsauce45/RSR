@@ -21,7 +21,7 @@
         accepts: 'application/json',
         type: 'GET',
         dataType: 'json',
-        url: "RSR/subscriptions/" + subId
+        url: RSR.webroot + ("subscriptions/" + subId)
       });
       return promise.then((function(_this) {
         return function(results) {
@@ -135,7 +135,7 @@
         accepts: 'application/json',
         type: 'GET',
         dataType: 'json',
-        url: 'RSR/subscriptions',
+        url: RSR.webroot + 'subscriptions',
         error: error
       });
       return promise.then((function(_this) {
@@ -164,7 +164,7 @@
         type: 'POST',
         data: credentials,
         dataType: 'json',
-        url: 'RSR/login'
+        url: RSR.webroot + 'login'
       });
       return promise.then((function(_this) {
         return function(results) {
